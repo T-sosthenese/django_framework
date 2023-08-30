@@ -1,5 +1,5 @@
-from django.http import HttpResponse
+from django.views.generic import TemplateView
 
-def homePageView(request):
-    """ A function that returns Hello World."""
-    return HttpResponse("Hello, World!")
+class HomePageView(TemplateView):
+    """A homepage class that inherits from django's TemplateView class."""
+    template_name = "home.html"
